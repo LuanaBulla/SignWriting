@@ -1,0 +1,2042 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="https://domain/SignWritingOntology#" IRI="sw"/>
+    <Declaration>
+        <Class IRI="http://wordnet-rdf.princeton.edu/ontology#Synset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/BabyFinger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/BrowEyesEyegaze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/CanonicalDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/CheeksNoseBreath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Circle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Contact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/CurvesFloorPlane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/CurvesHitFloorPLane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/CurvesHitWallPlane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/CurvesWallPLane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocationGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FingerMovement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FiveFingers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWriting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingGlyph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingToken"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FourFingers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FswBaseSymbolRanges"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FswModifierIndexes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FswNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/HandPart"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Head"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/IndexFinger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/IndexMiddleThumb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Limbs"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/MiddleFinger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/MouthLips"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Movement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Plane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Punctuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/PunctuationGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/RingFinger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/RotationAngle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/RotationAxis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingOrientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingRotation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSpatialFeature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/StraightDiagonalPlane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/StraightFloorPlane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/StraightWallPlane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Thumb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Timing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/TongueChinNeck"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Trunk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/ViewPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Index&amp;MiddleFingers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://domain/SignWritingOntology/Index&amp;Thumb"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/PositionAxisX"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/PositionAxisY"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCanonicalDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFSWSign"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswBoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasHandPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasPlane"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasRotationAngle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasRotationAxis"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSignWritingGlyph"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSignWritingVariant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSynset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasViewPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isCanonicalDescriptionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isCategoryIDOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isCategoryOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isFSWSignOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isFswBoundingBoxOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isFswGlyphOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isGlyphNumberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isGroupIDOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isHandPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isPlaneOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isPositionAxisXOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isPositionAxisYOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isRotationAngleOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isRotationAxisOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isSignWritingGlyphOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isSignWritingVariantOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isSynsetOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isViewPointOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/orientation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/rotation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="rdf:label"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/PositionAxisX"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/PositionAxisY"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFSW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasGlyphNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasHandPart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMaximumX"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMaximumY"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMeaning"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMinimumX"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMinimumY"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasPlane"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasRotationAngle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasRotationAxis"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasSignWritingVariant"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasSymbolKey"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasViewPoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/A_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/B_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/BabyFinger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Back"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Body"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/BrowEyesEyegaze"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CheeksNoseBreath"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Circle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Contact"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesFloorPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesHitFloorPLane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesHitWallPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesWallPLane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DetailedLocationGroup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FingerMovement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FiveFingers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FloorPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FourFingers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FrontView"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group19"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group23"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group24"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group25"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group26"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group27"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group28"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group29"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group30"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Hand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Head"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/IndexFinger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/IndexMiddleThumb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/L_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Limbs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/M_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/MiddleFinger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/MouthLips"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Movement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/P_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Palm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Punctuation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/PunctuationGroup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/R_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/RingFinger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Side"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/StraightDiagonalPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/StraightFloorPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/StraightWallPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Thumb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Timing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/TongueChinNeck"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/TopView"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Trunk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/WallPlane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Writing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/X"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Y"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Z"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/i_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/n_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/o_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/prova"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/s_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/w_Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Index&amp;MiddleFingers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Index&amp;Thumb"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://wordnet-rdf.princeton.edu/ontology#Synset"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWriting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/BabyFinger"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/BrowEyesEyegaze"/>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/CanonicalDescription"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/CheeksNoseBreath"/>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Circle"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Contact"/>
+        <Class IRI="https://domain/SignWritingOntology/Movement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/CurvesFloorPlane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/CurvesHitFloorPLane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/CurvesHitWallPlane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/CurvesWallPLane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocationGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+        <Class IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+        <Class IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FingerMovement"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FiveFingers"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWriting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWriting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingToken"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWriting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FourFingers"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FswBaseSymbolRanges"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingToken"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FswModifierIndexes"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingToken"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FswNumber"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingToken"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingToken"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://domain/SignWritingOntology/orientation"/>
+            <Class IRI="https://domain/SignWritingOntology/SignWritingOrientation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="https://domain/SignWritingOntology/rotation"/>
+            <Class IRI="https://domain/SignWritingOntology/SignWritingRotation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/HandPart"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingOrientation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Head"/>
+        <Class IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/IndexFinger"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/IndexMiddleThumb"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Limbs"/>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/MiddleFinger"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/MouthLips"/>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Movement"/>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Plane"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingOrientation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Punctuation"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/PunctuationGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Punctuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/RingFinger"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/RotationAngle"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingRotation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/RotationAxis"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingRotation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategory"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroup"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingOrientation"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSpatialFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingRotation"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSpatialFeature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="https://domain/SignWritingOntology/hasFSWSign"/>
+            <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="https://domain/SignWritingOntology/hasCanonicalDescription"/>
+            <Class IRI="https://domain/SignWritingOntology/CanonicalDescription"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/StraightDiagonalPlane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/StraightFloorPlane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/StraightWallPlane"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Thumb"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Timing"/>
+        <Class IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/TongueChinNeck"/>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Trunk"/>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/ViewPoint"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingOrientation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Writing"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Index&amp;MiddleFingers"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://domain/SignWritingOntology/Index&amp;Thumb"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/A_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/B_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/HandPart"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Back"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/Plane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FloorPlane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/ViewPoint"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FrontView"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group15"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group17"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group20"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group24"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group25"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group27"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group28"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group29"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/L_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/M_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswBaseSymbolRanges"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/P_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/HandPart"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Palm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswStructuralMakers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/R_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/HandPart"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Side"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/ViewPoint"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/TopView"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/Plane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/WallPlane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/RotationAxis"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/X"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/RotationAxis"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Y"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/RotationAxis"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Z"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswModifierIndexes"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/i_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswNumber"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/n_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswModifierIndexes"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/o_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/CanonicalDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/prova"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswBaseSymbolRanges"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/s_Token"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="https://domain/SignWritingOntology/FswBaseSymbolRanges"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/w_Token"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/BabyFinger"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Body"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/BrowEyesEyegaze"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group23"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CheeksNoseBreath"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Circle"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group20"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Contact"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesFloorPlane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group19"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesHitFloorPLane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group18"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesHitWallPlane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group17"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/CurvesWallPLane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group16"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DetailedLocationGroup"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group29"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FingerMovement"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FiveFingers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/FourFingers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Hand"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Head"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group22"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/IndexFinger"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/IndexMiddleThumb"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Limbs"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group28"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/MiddleFinger"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/MouthLips"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group25"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Movement"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Punctuation"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Category7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/PunctuationGroup"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/RingFinger"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/StraightDiagonalPlane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group14"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/StraightFloorPlane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group15"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/StraightWallPlane"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group13"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Thumb"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Timing"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group21"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/TongueChinNeck"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group26"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Trunk"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group27"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Index&amp;MiddleFingers"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Index&amp;Thumb"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Group9"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/A_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Sequence Marker</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/B_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Signbox Marker</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+        <Literal xml:lang="en">S37f - S386</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+        <Literal>S2f7 - S2fe</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Hand"/>
+        <Literal>S100 - 204</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Head"/>
+        <Literal>S2ff - S36c</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/L_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Left Lane Marker</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Limbs"/>
+        <Literal>S376 - S37e</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/M_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Middle Lane Marker</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Movement"/>
+        <Literal>S205 - S2f6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/P_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Punctuation BaseSymbols</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Punctuation"/>
+        <Literal xml:lang="en">S387 - S38b</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/R_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Right Lane Marker</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+        <Literal>S100 - S38b</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Trunk"/>
+        <Literal>S36d - S375</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/Writing"/>
+        <Literal>S100 - S37e</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/i_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Fill Modifiers</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/n_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Number from 250 to 749</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/o_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Rotation Modifiers</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/s_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Detailed Location BaseSymbols</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <NamedIndividual IRI="https://domain/SignWritingOntology/w_Token"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Writing BaseSymbols</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/PositionAxisX"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isPositionAxisXOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/PositionAxisY"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isPositionAxisYOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCanonicalDescription"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isCanonicalDescriptionOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isCategoryOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategoryID"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isCategoryIDOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFSWSign"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isFSWSignOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswBoundingBox"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isFswBoundingBoxOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isFswGlyphOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroupID"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isGroupIDOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasHandPart"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isHandPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasPlane"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isPlaneOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasRotationAngle"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isRotationAngleOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasRotationAxis"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isRotationAxisOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSignWritingGlyph"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isSignWritingGlyphOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSignWritingVariant"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isSignWritingVariantOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSynset"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isSynsetOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasViewPoint"/>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/isViewPointOf"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/PositionAxisX"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/PositionAxisY"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCanonicalDescription"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCanonicalDescription"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFSWSign"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswBoundingBox"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/Movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Dynamic"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Face"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasHandPart"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasPlane"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasRotationAngle"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasRotationAxis"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSignWritingGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSynset"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasViewPoint"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCanonicalDescription"/>
+        <Class IRI="https://domain/SignWritingOntology/CanonicalDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/Body"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/DynamicsAndTiming"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/Hand"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/HeadAndFace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasCategory"/>
+        <Class IRI="https://domain/SignWritingOntology/Movement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFSWSign"/>
+        <Class IRI="http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswBoundingBox"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasFswGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingGlyph"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/BabyFinger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Contact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/DetailedLocationGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/FiveFingers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/FourFingers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/IndexFinger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/IndexMiddleThumb"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Limbs"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/MiddleFinger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/RingFinger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Thumb"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/TongueChinNeck"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Trunk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Index&amp;MiddleFingers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasGroup"/>
+        <Class IRI="https://domain/SignWritingOntology/Index&amp;Thumb"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSignWritingGlyph"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://domain/SignWritingOntology/hasSynset"/>
+        <Class IRI="http://wordnet-rdf.princeton.edu/ontology#Synset"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingGlyph"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasGlyphNumber"/>
+        <Class IRI="https://domain/SignWritingOntology/SignWritingSign"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMaximumX"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMaximumY"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMinimumX"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMinimumY"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingBoundingBox"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasSymbolKey"/>
+        <Class IRI="https://domain/SignWritingOntology/FormalSignWritingGlyph"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/PositionAxisX"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/PositionAxisY"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasDescription"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFSW"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasFswRange"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasGlyphNumber"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMaximumX"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMaximumY"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMeaning"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMinimumX"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasMinimumY"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasSignWritingVariant"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="https://domain/SignWritingOntology/hasSymbolKey"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://wordnet-rdf.princeton.edu/ontology#Synset</IRI>
+        <Literal xml:lang="it">Significato univoco del segno in SignWriting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://wordnet-rdf.princeton.edu/ontology#Synset</IRI>
+        <Literal xml:lang="en">Unique meaning of sign in SignWriting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign</IRI>
+        <Literal xml:lang="it">Rappresentazione in FormaSignWriting del segno grafico.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign</IRI>
+        <Literal xml:lang="en">Representation of the sign in FormalSignWriting encoding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning</IRI>
+        <Literal xml:lang="it">Rappresentazione del significato semantico del segno in SignWriting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning</IRI>
+        <Literal xml:lang="en">Representation of the semantic meaning of the sign in SignWriting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Body</IRI>
+        <Literal xml:lang="it">Glifi che indicano parti del corpo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Body</IRI>
+        <Literal xml:lang="en">Glyphs indicating body parts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/CanonicalDescription</IRI>
+        <Literal xml:lang="it">Decsrizione del segno in SignWriting tramite una descrizione tipizzata.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/CanonicalDescription</IRI>
+        <Literal xml:lang="en">Representation of the sign through a canonical description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/DetailedLocation</IRI>
+        <Literal xml:lang="en">Detailed location symbols can only be used in the temporal prefix.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/DynamicsAndTiming</IRI>
+        <Literal xml:lang="en">Dynamic symbols are used to give the &quot;feeling&quot; or &quot;tempo&quot; to movement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/FormalSignWriting</IRI>
+        <Literal xml:lang="it">Codifica in FormalSignWriting (FSW)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/FormalSignWriting</IRI>
+        <Literal xml:lang="en">Formal SignWriting is one particular computerized encoding for Sutton SignWriting. The design is based on character processing with regular expressions. With Formal SignWriting, each sign is written as a two-part word of time and space.
+
+Formal SignWriting was created using four design principles: completeness, universality, empowerment, and possiblity.
+
+2.1.1. Complete
+Sutton SignWriting is a complex script with unique requirements and processing. Formal SignWriting supports all of the structures inherent to the script.
+
+2.1.2. Universal
+Sutton SignWriting can be used to write any sign language, natural or constructed. Formal SignWriting supports all sign languages without requiring the addition of new characters or updated fonts.
+
+2.1.3. Empowering
+Sutton SignWriting is flexible enough to let each writer decide how they want to write their signs. Formal SignWriting enable the writers to decide for themselves the spelling of their respective signs.
+
+2.1.4. Possible
+Sutton SignWriting is a practical script that makes it possible to write sign language. Formal SignWriting is a practical encoding because it works with existing font technologies across operating systems.
+
+Formal SignWriting in ASCII (FSW) was released in January 2012 and has been stable since. FSW only uses characters from the ASCII subset of &quot;ABLMRS0123456789xabcdef&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/FormalSignWritingBoundingBox</IRI>
+        <Literal xml:lang="en">The symbols do not have a consistent width or height. The center of a symbol can be safely assumed to be at half-width and half-height. A bounding box for a symbol is based on the symbol width and height. Each symbol has a defined width and height in a text file with 37,811 lines. Alternately, the symbol width and height can be calculated by analyzing the glyphs in a TTF font file, using JavaScript or other language.
+
+The bounding box of a sign is a tight box around the symbols. The bounding box is used to determine the width and height of a sign.
+
+The bounding box of a sign consists of four values: Minimum X, Minimum Y, Maximum X and Maximum Y. The values of the bounding box is taken straight from the coordinates in an Formal SignWriting word.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/FormalSignWritingGlyph</IRI>
+        <Literal xml:lang="it">Codifica in FormalSignWriting del glifo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/FormalSignWritingGlyph</IRI>
+        <Literal xml:lang="en">Symbol keys are 6 characters long. The first character of a symbol key is always &quot;S&quot;. The next 3 characters identify the symbol base. The last two characters identify the fill and rotation modifiers respectively.
+
+Regular Expression + Description
+
+S &gt;&gt; Start of symbol key
+[123][0-9a-f]{2}	&gt;&gt; Symbol key base
+[0-5] &gt;&gt; Fill modifier
+[0-9a-f] &gt;&gt; Rotation modifier
+S[123][0-9a-f]{2}[0-5][0-9a-f] &gt;&gt; Symbol key definition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/FormalSignWritingToken</IRI>
+        <Literal xml:lang="en">The Formal SignWriting encoding model makes explicit those features which can be effectively and efficiently processed. The mathematical names are structured with 11 different tokens. They can be grouped in 4 layers: the 5 structural makers (A, B, L, M, R), the 3 base symbol ranges (w, s, P), the 2 modifier indexes (i, o), and the numbers (n).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Limbs</IRI>
+        <Literal xml:lang="en">Symbols for limbs and fingers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Movement</IRI>
+        <Literal xml:lang="en">Contact symbols, small finger movements, straight arrows, curved arrows and circles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Punctuation</IRI>
+        <Literal xml:lang="en">Punctuation is represented by a single symbol and separates a series of signs into structured sentences.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingCategory</IRI>
+        <Literal xml:lang="it">Elenco delle categorie in cui sono suddivisi i glifi del SignWriting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingCategory</IRI>
+        <Literal xml:lang="en">List of categories into which SignWriting glyphs are divided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingCategoryID</IRI>
+        <Literal xml:lang="it">Identificativo numerico che indica la categoria di appartenenza per ogni gruppo di glifi.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingCategoryID</IRI>
+        <Literal xml:lang="en">Numeric identifier indicating the category to which each group of glyphs belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingGlyph</IRI>
+        <Literal xml:lang="en">Minimum part that makes up the sign in SignWriting. A symbol or glyph represents phonemic information and is full of featural information to better understand the phonemes of the symbols. The symbols are arranged in 2 dimensions to create the sign images. The symbols are organized with a 16-bit coded character set and a layered hierarchy.
+
+.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingGlyph</IRI>
+        <Literal xml:lang="it">Parte minima che compone il segno in SignWriting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingGroup</IRI>
+        <Literal xml:lang="en">Groups into which the SignWriting glyphs have been divided.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingGroup</IRI>
+        <Literal xml:lang="it">Gruppi in cui sono stati suddivisi i glifi del SignWriting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingGroupID</IRI>
+        <Literal xml:lang="it">Identificatore numerico che indica il gruppo a cui appartiene ogni glifo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingGroupID</IRI>
+        <Literal xml:lang="en">Numeric identifier indicating the group to which each glyph belongs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingSign</IRI>
+        <Literal xml:lang="en">An instance of SignWritingSign represents a sign encoded according to the formal SignWriting notation. A sign is a 2-dimensional arrangement of symbols and is full of featural information to better understand the morphemes of the signs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/SignWritingSign</IRI>
+        <Literal xml:lang="it">Un&apos;istanza di SignWritingSign rappresenta un segno codificato secondo la notazione formale SignWriting.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Trunk</IRI>
+        <Literal xml:lang="en">Symbols for torso movement, shoulders, and hips.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/Writing</IRI>
+        <Literal xml:lang="en">Symbols that can be used in the spatial signbox or the temporal prefix.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://domain/SignWritingOntology/hasSymbolKey</IRI>
+        <Literal xml:lang="it">Ogni glifo ha un segno in Fsw corrispondente</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
