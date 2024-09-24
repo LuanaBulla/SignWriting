@@ -1,0 +1,1284 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix https://domain/SignWritingOntology#: <sw> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://domain/SignWritingOntology/PositionAxisX
+<https://domain/SignWritingOntology/PositionAxisX> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://domain/SignWritingOntology/isPositionAxisXOf> ;
+                                                   rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/PositionAxisY
+<https://domain/SignWritingOntology/PositionAxisY> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://domain/SignWritingOntology/isPositionAxisYOf> ;
+                                                   rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasCanonicalDescription
+<https://domain/SignWritingOntology/hasCanonicalDescription> rdf:type owl:ObjectProperty ;
+                                                             owl:inverseOf <https://domain/SignWritingOntology/isCanonicalDescriptionOf> ;
+                                                             rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> ,
+                                                                         <https://domain/SignWritingOntology/SignWritingSign> ;
+                                                             rdfs:range <https://domain/SignWritingOntology/CanonicalDescription> .
+
+
+###  https://domain/SignWritingOntology/hasCategory
+<https://domain/SignWritingOntology/hasCategory> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://domain/SignWritingOntology/isCategoryOf> ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> ;
+                                                 rdfs:range <https://domain/SignWritingOntology/Body> ,
+                                                            <https://domain/SignWritingOntology/DetailedLocation> ,
+                                                            <https://domain/SignWritingOntology/DynamicsAndTiming> ,
+                                                            <https://domain/SignWritingOntology/Hand> ,
+                                                            <https://domain/SignWritingOntology/HeadAndFace> ,
+                                                            <https://domain/SignWritingOntology/Movement> .
+
+
+###  https://domain/SignWritingOntology/hasCategoryID
+<https://domain/SignWritingOntology/hasCategoryID> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://domain/SignWritingOntology/isCategoryIDOf> .
+
+
+###  https://domain/SignWritingOntology/hasFSWSign
+<https://domain/SignWritingOntology/hasFSWSign> rdf:type owl:ObjectProperty ;
+                                                owl:inverseOf <https://domain/SignWritingOntology/isFSWSignOf> ;
+                                                rdfs:domain <https://domain/SignWritingOntology/SignWritingSign> ;
+                                                rdfs:range <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> .
+
+
+###  https://domain/SignWritingOntology/hasFswBoundingBox
+<https://domain/SignWritingOntology/hasFswBoundingBox> rdf:type owl:ObjectProperty ;
+                                                       owl:inverseOf <https://domain/SignWritingOntology/isFswBoundingBoxOf> ;
+                                                       rdfs:domain <https://domain/SignWritingOntology/SignWritingSign> ;
+                                                       rdfs:range <https://domain/SignWritingOntology/FormalSignWritingBoundingBox> .
+
+
+###  https://domain/SignWritingOntology/hasFswGlyph
+<https://domain/SignWritingOntology/hasFswGlyph> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://domain/SignWritingOntology/isFswGlyphOf> ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/Body> ,
+                                                             <https://domain/SignWritingOntology/DetailedLocation> ,
+                                                             <https://domain/SignWritingOntology/DynamicsAndTiming> ,
+                                                             <https://domain/SignWritingOntology/Hand> ,
+                                                             <https://domain/SignWritingOntology/HeadAndFace> ,
+                                                             <https://domain/SignWritingOntology/Movement> ;
+                                                 rdfs:range <https://domain/SignWritingOntology/FormalSignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasGroup
+<https://domain/SignWritingOntology/hasGroup> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://domain/SignWritingOntology/Body> ,
+                                                          <https://domain/SignWritingOntology/DetailedLocation> ,
+                                                          <https://domain/SignWritingOntology/Dynamic> ,
+                                                          <https://domain/SignWritingOntology/Face> ,
+                                                          <https://domain/SignWritingOntology/Hand> ,
+                                                          <https://domain/SignWritingOntology/Movement> ;
+                                              rdfs:range <https://domain/SignWritingOntology/BabyFinger> ,
+                                                         <https://domain/SignWritingOntology/Contact> ,
+                                                         <https://domain/SignWritingOntology/DetailedLocationGroup> ,
+                                                         <https://domain/SignWritingOntology/FiveFingers> ,
+                                                         <https://domain/SignWritingOntology/FourFingers> ,
+                                                         <https://domain/SignWritingOntology/IndexFinger> ,
+                                                         <https://domain/SignWritingOntology/IndexMiddleThumb> ,
+                                                         <https://domain/SignWritingOntology/Limbs> ,
+                                                         <https://domain/SignWritingOntology/MiddleFinger> ,
+                                                         <https://domain/SignWritingOntology/RingFinger> ,
+                                                         <https://domain/SignWritingOntology/Thumb> ,
+                                                         <https://domain/SignWritingOntology/TongueChinNeck> ,
+                                                         <https://domain/SignWritingOntology/Trunk> ,
+                                                         <https://domain/SignWritingOntology/Index&MiddleFingers> ,
+                                                         <https://domain/SignWritingOntology/Index&Thumb> .
+
+
+###  https://domain/SignWritingOntology/hasGroupID
+<https://domain/SignWritingOntology/hasGroupID> rdf:type owl:ObjectProperty ;
+                                                owl:inverseOf <https://domain/SignWritingOntology/isGroupIDOf> .
+
+
+###  https://domain/SignWritingOntology/hasHandPart
+<https://domain/SignWritingOntology/hasHandPart> rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf <https://domain/SignWritingOntology/isHandPartOf> ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasPlane
+<https://domain/SignWritingOntology/hasPlane> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://domain/SignWritingOntology/isPlaneOf> ;
+                                              rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasRotationAngle
+<https://domain/SignWritingOntology/hasRotationAngle> rdf:type owl:ObjectProperty ;
+                                                      owl:inverseOf <https://domain/SignWritingOntology/isRotationAngleOf> ;
+                                                      rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasRotationAxis
+<https://domain/SignWritingOntology/hasRotationAxis> rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf <https://domain/SignWritingOntology/isRotationAxisOf> ;
+                                                     rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasSignWritingGlyph
+<https://domain/SignWritingOntology/hasSignWritingGlyph> rdf:type owl:ObjectProperty ;
+                                                         owl:inverseOf <https://domain/SignWritingOntology/isSignWritingGlyphOf> ;
+                                                         rdfs:domain <https://domain/SignWritingOntology/SignWritingSign> ;
+                                                         rdfs:range <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasSignWritingVariant
+<https://domain/SignWritingOntology/hasSignWritingVariant> rdf:type owl:ObjectProperty ;
+                                                           owl:inverseOf <https://domain/SignWritingOntology/isSignWritingVariantOf> .
+
+
+###  https://domain/SignWritingOntology/hasSynset
+<https://domain/SignWritingOntology/hasSynset> rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf <https://domain/SignWritingOntology/isSynsetOf> ;
+                                               rdfs:domain <https://domain/SignWritingOntology/SignWritingSign> ;
+                                               rdfs:range <http://wordnet-rdf.princeton.edu/ontology#Synset> .
+
+
+###  https://domain/SignWritingOntology/hasViewPoint
+<https://domain/SignWritingOntology/hasViewPoint> rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf <https://domain/SignWritingOntology/isViewPointOf> ;
+                                                  rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/isCanonicalDescriptionOf
+<https://domain/SignWritingOntology/isCanonicalDescriptionOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isCategoryIDOf
+<https://domain/SignWritingOntology/isCategoryIDOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isCategoryOf
+<https://domain/SignWritingOntology/isCategoryOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isFSWSignOf
+<https://domain/SignWritingOntology/isFSWSignOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isFswBoundingBoxOf
+<https://domain/SignWritingOntology/isFswBoundingBoxOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isFswGlyphOf
+<https://domain/SignWritingOntology/isFswGlyphOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isGlyphNumberOf
+<https://domain/SignWritingOntology/isGlyphNumberOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isGroupIDOf
+<https://domain/SignWritingOntology/isGroupIDOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isHandPartOf
+<https://domain/SignWritingOntology/isHandPartOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isPlaneOf
+<https://domain/SignWritingOntology/isPlaneOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isPositionAxisXOf
+<https://domain/SignWritingOntology/isPositionAxisXOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isPositionAxisYOf
+<https://domain/SignWritingOntology/isPositionAxisYOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isRotationAngleOf
+<https://domain/SignWritingOntology/isRotationAngleOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isRotationAxisOf
+<https://domain/SignWritingOntology/isRotationAxisOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isSignWritingGlyphOf
+<https://domain/SignWritingOntology/isSignWritingGlyphOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isSignWritingVariantOf
+<https://domain/SignWritingOntology/isSignWritingVariantOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isSynsetOf
+<https://domain/SignWritingOntology/isSynsetOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isViewPointOf
+<https://domain/SignWritingOntology/isViewPointOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/orientation
+<https://domain/SignWritingOntology/orientation> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/rotation
+<https://domain/SignWritingOntology/rotation> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#label
+rdf:label rdf:type owl:DatatypeProperty .
+
+
+###  https://domain/SignWritingOntology/PositionAxisX
+<https://domain/SignWritingOntology/PositionAxisX> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:range xsd:integer .
+
+
+###  https://domain/SignWritingOntology/PositionAxisY
+<https://domain/SignWritingOntology/PositionAxisY> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:range xsd:integer .
+
+
+###  https://domain/SignWritingOntology/hasDescription
+<https://domain/SignWritingOntology/hasDescription> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:range rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/hasFSW
+<https://domain/SignWritingOntology/hasFSW> rdf:type owl:DatatypeProperty ;
+                                            rdfs:range xsd:string .
+
+
+###  https://domain/SignWritingOntology/hasFswRange
+<https://domain/SignWritingOntology/hasFswRange> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> ;
+                                                 rdfs:range rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/hasGlyphNumber
+<https://domain/SignWritingOntology/hasGlyphNumber> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <https://domain/SignWritingOntology/SignWritingSign> ;
+                                                    rdfs:range xsd:integer .
+
+
+###  https://domain/SignWritingOntology/hasHandPart
+<https://domain/SignWritingOntology/hasHandPart> rdf:type owl:DatatypeProperty .
+
+
+###  https://domain/SignWritingOntology/hasMaximumX
+<https://domain/SignWritingOntology/hasMaximumX> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingBoundingBox> ;
+                                                 rdfs:range xsd:int .
+
+
+###  https://domain/SignWritingOntology/hasMaximumY
+<https://domain/SignWritingOntology/hasMaximumY> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingBoundingBox> ;
+                                                 rdfs:range xsd:int .
+
+
+###  https://domain/SignWritingOntology/hasMeaning
+<https://domain/SignWritingOntology/hasMeaning> rdf:type owl:DatatypeProperty ;
+                                                rdfs:range xsd:string .
+
+
+###  https://domain/SignWritingOntology/hasMinimumX
+<https://domain/SignWritingOntology/hasMinimumX> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingBoundingBox> ;
+                                                 rdfs:range xsd:int .
+
+
+###  https://domain/SignWritingOntology/hasMinimumY
+<https://domain/SignWritingOntology/hasMinimumY> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingBoundingBox> ;
+                                                 rdfs:range xsd:int .
+
+
+###  https://domain/SignWritingOntology/hasPlane
+<https://domain/SignWritingOntology/hasPlane> rdf:type owl:DatatypeProperty .
+
+
+###  https://domain/SignWritingOntology/hasRotationAngle
+<https://domain/SignWritingOntology/hasRotationAngle> rdf:type owl:DatatypeProperty .
+
+
+###  https://domain/SignWritingOntology/hasRotationAxis
+<https://domain/SignWritingOntology/hasRotationAxis> rdf:type owl:DatatypeProperty .
+
+
+###  https://domain/SignWritingOntology/hasSignWritingVariant
+<https://domain/SignWritingOntology/hasSignWritingVariant> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:range xsd:string .
+
+
+###  https://domain/SignWritingOntology/hasSymbolKey
+<https://domain/SignWritingOntology/hasSymbolKey> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingGlyph> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "Ogni glifo ha un segno in Fsw corrispondente"@it .
+
+
+###  https://domain/SignWritingOntology/hasViewPoint
+<https://domain/SignWritingOntology/hasViewPoint> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://wordnet-rdf.princeton.edu/ontology#Synset
+<http://wordnet-rdf.princeton.edu/ontology#Synset> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning> ;
+                                                   rdfs:comment "Significato univoco del segno in SignWriting"@it ,
+                                                                "Unique meaning of sign in SignWriting"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign
+<http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWriting> ;
+                                                                 rdfs:comment "Rappresentazione in FormaSignWriting del segno grafico."@it ,
+                                                                              "Representation of the sign in FormalSignWriting encoding"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning
+<http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning> rdf:type owl:Class ;
+                                                              rdfs:comment "Rappresentazione del significato semantico del segno in SignWriting."@it ,
+                                                                           "Representation of the semantic meaning of the sign in SignWriting."@en .
+
+
+###  https://domain/SignWritingOntology/BabyFinger
+<https://domain/SignWritingOntology/BabyFinger> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/Body
+<https://domain/SignWritingOntology/Body> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/Writing> .
+
+
+###  https://domain/SignWritingOntology/BrowEyesEyegaze
+<https://domain/SignWritingOntology/BrowEyesEyegaze> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://domain/SignWritingOntology/Face> .
+
+
+###  https://domain/SignWritingOntology/CanonicalDescription
+<https://domain/SignWritingOntology/CanonicalDescription> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#SignWritingMeaning> ;
+                                                          rdfs:comment "Decsrizione del segno in SignWriting tramite una descrizione tipizzata."@it ,
+                                                                       "Representation of the sign through a canonical description."@en .
+
+
+###  https://domain/SignWritingOntology/CheeksNoseBreath
+<https://domain/SignWritingOntology/CheeksNoseBreath> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://domain/SignWritingOntology/Face> .
+
+
+###  https://domain/SignWritingOntology/Circle
+<https://domain/SignWritingOntology/Circle> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/Contact
+<https://domain/SignWritingOntology/Contact> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://domain/SignWritingOntology/Movement> .
+
+
+###  https://domain/SignWritingOntology/CurvesFloorPlane
+<https://domain/SignWritingOntology/CurvesFloorPlane> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/CurvesHitFloorPLane
+<https://domain/SignWritingOntology/CurvesHitFloorPLane> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/CurvesHitWallPlane
+<https://domain/SignWritingOntology/CurvesHitWallPlane> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/CurvesWallPLane
+<https://domain/SignWritingOntology/CurvesWallPLane> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/DetailedLocation
+<https://domain/SignWritingOntology/DetailedLocation> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/DetailedLocationGroup
+<https://domain/SignWritingOntology/DetailedLocationGroup> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://domain/SignWritingOntology/DetailedLocation> .
+
+
+###  https://domain/SignWritingOntology/Dynamic
+<https://domain/SignWritingOntology/Dynamic> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://domain/SignWritingOntology/DynamicsAndTiming> .
+
+
+###  https://domain/SignWritingOntology/DynamicsAndTiming
+<https://domain/SignWritingOntology/DynamicsAndTiming> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://domain/SignWritingOntology/Writing> .
+
+
+###  https://domain/SignWritingOntology/Face
+<https://domain/SignWritingOntology/Face> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/HeadAndFace> .
+
+
+###  https://domain/SignWritingOntology/FingerMovement
+<https://domain/SignWritingOntology/FingerMovement> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/FiveFingers
+<https://domain/SignWritingOntology/FiveFingers> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/FormalSignWriting
+<https://domain/SignWritingOntology/FormalSignWriting> rdf:type owl:Class ;
+                                                       rdfs:comment "Codifica in FormalSignWriting (FSW)"@it ,
+                                                                    """Formal SignWriting is one particular computerized encoding for Sutton SignWriting. The design is based on character processing with regular expressions. With Formal SignWriting, each sign is written as a two-part word of time and space.
+
+Formal SignWriting was created using four design principles: completeness, universality, empowerment, and possiblity.
+
+2.1.1. Complete
+Sutton SignWriting is a complex script with unique requirements and processing. Formal SignWriting supports all of the structures inherent to the script.
+
+2.1.2. Universal
+Sutton SignWriting can be used to write any sign language, natural or constructed. Formal SignWriting supports all sign languages without requiring the addition of new characters or updated fonts.
+
+2.1.3. Empowering
+Sutton SignWriting is flexible enough to let each writer decide how they want to write their signs. Formal SignWriting enable the writers to decide for themselves the spelling of their respective signs.
+
+2.1.4. Possible
+Sutton SignWriting is a practical script that makes it possible to write sign language. Formal SignWriting is a practical encoding because it works with existing font technologies across operating systems.
+
+Formal SignWriting in ASCII (FSW) was released in January 2012 and has been stable since. FSW only uses characters from the ASCII subset of \"ABLMRS0123456789xabcdef\""""@en .
+
+
+###  https://domain/SignWritingOntology/FormalSignWritingBoundingBox
+<https://domain/SignWritingOntology/FormalSignWritingBoundingBox> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWriting> ;
+                                                                  rdfs:comment """The symbols do not have a consistent width or height. The center of a symbol can be safely assumed to be at half-width and half-height. A bounding box for a symbol is based on the symbol width and height. Each symbol has a defined width and height in a text file with 37,811 lines. Alternately, the symbol width and height can be calculated by analyzing the glyphs in a TTF font file, using JavaScript or other language.
+
+The bounding box of a sign is a tight box around the symbols. The bounding box is used to determine the width and height of a sign.
+
+The bounding box of a sign consists of four values: Minimum X, Minimum Y, Maximum X and Maximum Y. The values of the bounding box is taken straight from the coordinates in an Formal SignWriting word."""@en .
+
+
+###  https://domain/SignWritingOntology/FormalSignWritingGlyph
+<https://domain/SignWritingOntology/FormalSignWritingGlyph> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWriting> ;
+                                                            rdfs:comment "Codifica in FormalSignWriting del glifo"@it ,
+                                                                         """Symbol keys are 6 characters long. The first character of a symbol key is always \"S\". The next 3 characters identify the symbol base. The last two characters identify the fill and rotation modifiers respectively.
+
+Regular Expression + Description
+
+S >> Start of symbol key
+[123][0-9a-f]{2}	>> Symbol key base
+[0-5] >> Fill modifier
+[0-9a-f] >> Rotation modifier
+S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
+
+
+###  https://domain/SignWritingOntology/FormalSignWritingToken
+<https://domain/SignWritingOntology/FormalSignWritingToken> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWriting> ;
+                                                            rdfs:comment "The Formal SignWriting encoding model makes explicit those features which can be effectively and efficiently processed. The mathematical names are structured with 11 different tokens. They can be grouped in 4 layers: the 5 structural makers (A, B, L, M, R), the 3 base symbol ranges (w, s, P), the 2 modifier indexes (i, o), and the numbers (n)."@en .
+
+
+###  https://domain/SignWritingOntology/FourFingers
+<https://domain/SignWritingOntology/FourFingers> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/FswBaseSymbolRanges
+<https://domain/SignWritingOntology/FswBaseSymbolRanges> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingToken> .
+
+
+###  https://domain/SignWritingOntology/FswModifierIndexes
+<https://domain/SignWritingOntology/FswModifierIndexes> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingToken> .
+
+
+###  https://domain/SignWritingOntology/FswNumber
+<https://domain/SignWritingOntology/FswNumber> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingToken> .
+
+
+###  https://domain/SignWritingOntology/FswStructuralMakers
+<https://domain/SignWritingOntology/FswStructuralMakers> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingToken> .
+
+
+###  https://domain/SignWritingOntology/Hand
+<https://domain/SignWritingOntology/Hand> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/Writing> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://domain/SignWritingOntology/orientation> ;
+                                                            owl:someValuesFrom <https://domain/SignWritingOntology/SignWritingOrientation>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://domain/SignWritingOntology/rotation> ;
+                                                            owl:someValuesFrom <https://domain/SignWritingOntology/SignWritingRotation>
+                                                          ] .
+
+
+###  https://domain/SignWritingOntology/HandPart
+<https://domain/SignWritingOntology/HandPart> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingOrientation> .
+
+
+###  https://domain/SignWritingOntology/Head
+<https://domain/SignWritingOntology/Head> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/HeadAndFace> .
+
+
+###  https://domain/SignWritingOntology/HeadAndFace
+<https://domain/SignWritingOntology/HeadAndFace> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/Writing> .
+
+
+###  https://domain/SignWritingOntology/IndexFinger
+<https://domain/SignWritingOntology/IndexFinger> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/IndexMiddleThumb
+<https://domain/SignWritingOntology/IndexMiddleThumb> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/Limbs
+<https://domain/SignWritingOntology/Limbs> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://domain/SignWritingOntology/Body> .
+
+
+###  https://domain/SignWritingOntology/MiddleFinger
+<https://domain/SignWritingOntology/MiddleFinger> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/MouthLips
+<https://domain/SignWritingOntology/MouthLips> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://domain/SignWritingOntology/Face> .
+
+
+###  https://domain/SignWritingOntology/Movement
+<https://domain/SignWritingOntology/Movement> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://domain/SignWritingOntology/Writing> .
+
+
+###  https://domain/SignWritingOntology/Plane
+<https://domain/SignWritingOntology/Plane> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingOrientation> .
+
+
+###  https://domain/SignWritingOntology/Punctuation
+<https://domain/SignWritingOntology/Punctuation> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/PunctuationGroup
+<https://domain/SignWritingOntology/PunctuationGroup> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <https://domain/SignWritingOntology/Punctuation> .
+
+
+###  https://domain/SignWritingOntology/RingFinger
+<https://domain/SignWritingOntology/RingFinger> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/RotationAngle
+<https://domain/SignWritingOntology/RotationAngle> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingRotation> .
+
+
+###  https://domain/SignWritingOntology/RotationAxis
+<https://domain/SignWritingOntology/RotationAxis> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingRotation> .
+
+
+###  https://domain/SignWritingOntology/SignWritingCategory
+<https://domain/SignWritingOntology/SignWritingCategory> rdf:type owl:Class ;
+                                                         rdfs:comment "Elenco delle categorie in cui sono suddivisi i glifi del SignWriting."@it ,
+                                                                      "List of categories into which SignWriting glyphs are divided."@en .
+
+
+###  https://domain/SignWritingOntology/SignWritingCategoryID
+<https://domain/SignWritingOntology/SignWritingCategoryID> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingCategory> ;
+                                                           rdfs:comment "Identificativo numerico che indica la categoria di appartenenza per ogni gruppo di glifi."@it ,
+                                                                        "Numeric identifier indicating the category to which each group of glyphs belongs."@en .
+
+
+###  https://domain/SignWritingOntology/SignWritingGlyph
+<https://domain/SignWritingOntology/SignWritingGlyph> rdf:type owl:Class .
+
+
+###  https://domain/SignWritingOntology/SignWritingGroup
+<https://domain/SignWritingOntology/SignWritingGroup> rdf:type owl:Class ;
+                                                      rdfs:comment "Groups into which the SignWriting glyphs have been divided."@en ,
+                                                                   "Gruppi in cui sono stati suddivisi i glifi del SignWriting."@it .
+
+
+###  https://domain/SignWritingOntology/SignWritingGroupID
+<https://domain/SignWritingOntology/SignWritingGroupID> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingGroup> ;
+                                                        rdfs:comment "Identificatore numerico che indica il gruppo a cui appartiene ogni glifo."@it ,
+                                                                     "Numeric identifier indicating the group to which each glyph belongs."@en .
+
+
+###  https://domain/SignWritingOntology/SignWritingOrientation
+<https://domain/SignWritingOntology/SignWritingOrientation> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingSpatialFeature> .
+
+
+###  https://domain/SignWritingOntology/SignWritingRotation
+<https://domain/SignWritingOntology/SignWritingRotation> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingSpatialFeature> .
+
+
+###  https://domain/SignWritingOntology/SignWritingSign
+<https://domain/SignWritingOntology/SignWritingSign> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://domain/SignWritingOntology/hasFSWSign> ;
+                                                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                       owl:onClass <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <https://domain/SignWritingOntology/hasCanonicalDescription> ;
+                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                       owl:onClass <https://domain/SignWritingOntology/CanonicalDescription>
+                                                                     ] ;
+                                                     rdfs:comment "An instance of SignWritingSign represents a sign encoded according to the formal SignWriting notation. A sign is a 2-dimensional arrangement of symbols and is full of featural information to better understand the morphemes of the signs."@en ,
+                                                                  "Un'istanza di SignWritingSign rappresenta un segno codificato secondo la notazione formale SignWriting."@it .
+
+
+###  https://domain/SignWritingOntology/SignWritingSpatialFeature
+<https://domain/SignWritingOntology/SignWritingSpatialFeature> rdf:type owl:Class .
+
+
+###  https://domain/SignWritingOntology/StraightDiagonalPlane
+<https://domain/SignWritingOntology/StraightDiagonalPlane> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/StraightFloorPlane
+<https://domain/SignWritingOntology/StraightFloorPlane> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/StraightWallPlane
+<https://domain/SignWritingOntology/StraightWallPlane> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+
+
+###  https://domain/SignWritingOntology/Thumb
+<https://domain/SignWritingOntology/Thumb> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/Timing
+<https://domain/SignWritingOntology/Timing> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://domain/SignWritingOntology/DynamicsAndTiming> .
+
+
+###  https://domain/SignWritingOntology/TongueChinNeck
+<https://domain/SignWritingOntology/TongueChinNeck> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://domain/SignWritingOntology/Face> .
+
+
+###  https://domain/SignWritingOntology/Trunk
+<https://domain/SignWritingOntology/Trunk> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://domain/SignWritingOntology/Body> .
+
+
+###  https://domain/SignWritingOntology/ViewPoint
+<https://domain/SignWritingOntology/ViewPoint> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingOrientation> .
+
+
+###  https://domain/SignWritingOntology/Writing
+<https://domain/SignWritingOntology/Writing> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/Index&MiddleFingers
+<https://domain/SignWritingOntology/Index&MiddleFingers> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+###  https://domain/SignWritingOntology/Index&Thumb
+<https://domain/SignWritingOntology/Index&Thumb> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/Hand> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://domain/SignWritingOntology/A_Token
+<https://domain/SignWritingOntology/A_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswStructuralMakers> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Sequence Marker"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/B_Token
+<https://domain/SignWritingOntology/B_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswStructuralMakers> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Signbox Marker"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/BabyFinger
+<https://domain/SignWritingOntology/BabyFinger> rdf:type owl:NamedIndividual ;
+                                                <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group6> .
+
+
+###  https://domain/SignWritingOntology/Back
+<https://domain/SignWritingOntology/Back> rdf:type owl:NamedIndividual ,
+                                                   <https://domain/SignWritingOntology/HandPart> .
+
+
+###  https://domain/SignWritingOntology/Body
+<https://domain/SignWritingOntology/Body> rdf:type owl:NamedIndividual ;
+                                          <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category5> .
+
+
+###  https://domain/SignWritingOntology/BrowEyesEyegaze
+<https://domain/SignWritingOntology/BrowEyesEyegaze> rdf:type owl:NamedIndividual ;
+                                                     <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group23> .
+
+
+###  https://domain/SignWritingOntology/Category1
+<https://domain/SignWritingOntology/Category1> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/Category2
+<https://domain/SignWritingOntology/Category2> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/Category3
+<https://domain/SignWritingOntology/Category3> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/Category4
+<https://domain/SignWritingOntology/Category4> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/Category5
+<https://domain/SignWritingOntology/Category5> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/Category6
+<https://domain/SignWritingOntology/Category6> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/Category7
+<https://domain/SignWritingOntology/Category7> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/SignWritingCategoryID> .
+
+
+###  https://domain/SignWritingOntology/CheeksNoseBreath
+<https://domain/SignWritingOntology/CheeksNoseBreath> rdf:type owl:NamedIndividual ;
+                                                      <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group24> .
+
+
+###  https://domain/SignWritingOntology/Circle
+<https://domain/SignWritingOntology/Circle> rdf:type owl:NamedIndividual ;
+                                            <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group20> .
+
+
+###  https://domain/SignWritingOntology/Contact
+<https://domain/SignWritingOntology/Contact> rdf:type owl:NamedIndividual ;
+                                             <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group11> .
+
+
+###  https://domain/SignWritingOntology/CurvesFloorPlane
+<https://domain/SignWritingOntology/CurvesFloorPlane> rdf:type owl:NamedIndividual ;
+                                                      <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group19> .
+
+
+###  https://domain/SignWritingOntology/CurvesHitFloorPLane
+<https://domain/SignWritingOntology/CurvesHitFloorPLane> rdf:type owl:NamedIndividual ;
+                                                         <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group18> .
+
+
+###  https://domain/SignWritingOntology/CurvesHitWallPlane
+<https://domain/SignWritingOntology/CurvesHitWallPlane> rdf:type owl:NamedIndividual ;
+                                                        <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group17> .
+
+
+###  https://domain/SignWritingOntology/CurvesWallPLane
+<https://domain/SignWritingOntology/CurvesWallPLane> rdf:type owl:NamedIndividual ;
+                                                     <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group16> .
+
+
+###  https://domain/SignWritingOntology/DetailedLocation
+<https://domain/SignWritingOntology/DetailedLocation> rdf:type owl:NamedIndividual ;
+                                                      <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category6> ;
+                                                      <https://domain/SignWritingOntology/hasFswRange> "S37f - S386"@en .
+
+
+###  https://domain/SignWritingOntology/DetailedLocationGroup
+<https://domain/SignWritingOntology/DetailedLocationGroup> rdf:type owl:NamedIndividual ;
+                                                           <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group29> .
+
+
+###  https://domain/SignWritingOntology/DynamicsAndTiming
+<https://domain/SignWritingOntology/DynamicsAndTiming> rdf:type owl:NamedIndividual ;
+                                                       <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category3> ;
+                                                       <https://domain/SignWritingOntology/hasFswRange> "S2f7 - S2fe" .
+
+
+###  https://domain/SignWritingOntology/FingerMovement
+<https://domain/SignWritingOntology/FingerMovement> rdf:type owl:NamedIndividual ;
+                                                    <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group12> .
+
+
+###  https://domain/SignWritingOntology/FiveFingers
+<https://domain/SignWritingOntology/FiveFingers> rdf:type owl:NamedIndividual ;
+                                                 <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group5> .
+
+
+###  https://domain/SignWritingOntology/FloorPlane
+<https://domain/SignWritingOntology/FloorPlane> rdf:type owl:NamedIndividual ,
+                                                         <https://domain/SignWritingOntology/Plane> .
+
+
+###  https://domain/SignWritingOntology/FourFingers
+<https://domain/SignWritingOntology/FourFingers> rdf:type owl:NamedIndividual ;
+                                                 <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group4> .
+
+
+###  https://domain/SignWritingOntology/FrontView
+<https://domain/SignWritingOntology/FrontView> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/ViewPoint> .
+
+
+###  https://domain/SignWritingOntology/Group1
+<https://domain/SignWritingOntology/Group1> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group10
+<https://domain/SignWritingOntology/Group10> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group11
+<https://domain/SignWritingOntology/Group11> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group12
+<https://domain/SignWritingOntology/Group12> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group13
+<https://domain/SignWritingOntology/Group13> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group14
+<https://domain/SignWritingOntology/Group14> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group15
+<https://domain/SignWritingOntology/Group15> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group16
+<https://domain/SignWritingOntology/Group16> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group17
+<https://domain/SignWritingOntology/Group17> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group18
+<https://domain/SignWritingOntology/Group18> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group19
+<https://domain/SignWritingOntology/Group19> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group2
+<https://domain/SignWritingOntology/Group2> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group20
+<https://domain/SignWritingOntology/Group20> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group21
+<https://domain/SignWritingOntology/Group21> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group22
+<https://domain/SignWritingOntology/Group22> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group23
+<https://domain/SignWritingOntology/Group23> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group24
+<https://domain/SignWritingOntology/Group24> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group25
+<https://domain/SignWritingOntology/Group25> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group26
+<https://domain/SignWritingOntology/Group26> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group27
+<https://domain/SignWritingOntology/Group27> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group28
+<https://domain/SignWritingOntology/Group28> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group29
+<https://domain/SignWritingOntology/Group29> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group3
+<https://domain/SignWritingOntology/Group3> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group30
+<https://domain/SignWritingOntology/Group30> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group4
+<https://domain/SignWritingOntology/Group4> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group5
+<https://domain/SignWritingOntology/Group5> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group6
+<https://domain/SignWritingOntology/Group6> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group7
+<https://domain/SignWritingOntology/Group7> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group8
+<https://domain/SignWritingOntology/Group8> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Group9
+<https://domain/SignWritingOntology/Group9> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/SignWritingGroupID> .
+
+
+###  https://domain/SignWritingOntology/Hand
+<https://domain/SignWritingOntology/Hand> rdf:type owl:NamedIndividual ;
+                                          <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category1> ;
+                                          <https://domain/SignWritingOntology/hasFswRange> "S100 - 204" .
+
+
+###  https://domain/SignWritingOntology/Head
+<https://domain/SignWritingOntology/Head> rdf:type owl:NamedIndividual ;
+                                          <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group22> ;
+                                          <https://domain/SignWritingOntology/hasFswRange> "S2ff - S36c" .
+
+
+###  https://domain/SignWritingOntology/HeadAndFace
+<https://domain/SignWritingOntology/HeadAndFace> rdf:type owl:NamedIndividual ;
+                                                 <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category4> .
+
+
+###  https://domain/SignWritingOntology/IndexFinger
+<https://domain/SignWritingOntology/IndexFinger> rdf:type owl:NamedIndividual ;
+                                                 <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group1> .
+
+
+###  https://domain/SignWritingOntology/IndexMiddleThumb
+<https://domain/SignWritingOntology/IndexMiddleThumb> rdf:type owl:NamedIndividual ;
+                                                      <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group3> .
+
+
+###  https://domain/SignWritingOntology/L_Token
+<https://domain/SignWritingOntology/L_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswStructuralMakers> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Left Lane Marker"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/Limbs
+<https://domain/SignWritingOntology/Limbs> rdf:type owl:NamedIndividual ;
+                                           <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group28> ;
+                                           <https://domain/SignWritingOntology/hasFswRange> "S376 - S37e" .
+
+
+###  https://domain/SignWritingOntology/M_Token
+<https://domain/SignWritingOntology/M_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswStructuralMakers> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Middle Lane Marker"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/MiddleFinger
+<https://domain/SignWritingOntology/MiddleFinger> rdf:type owl:NamedIndividual ;
+                                                  <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group8> .
+
+
+###  https://domain/SignWritingOntology/MouthLips
+<https://domain/SignWritingOntology/MouthLips> rdf:type owl:NamedIndividual ;
+                                               <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group25> .
+
+
+###  https://domain/SignWritingOntology/Movement
+<https://domain/SignWritingOntology/Movement> rdf:type owl:NamedIndividual ;
+                                              <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category2> ;
+                                              <https://domain/SignWritingOntology/hasFswRange> "S205 - S2f6" .
+
+
+###  https://domain/SignWritingOntology/P_Token
+<https://domain/SignWritingOntology/P_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswBaseSymbolRanges> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Punctuation BaseSymbols"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/Palm
+<https://domain/SignWritingOntology/Palm> rdf:type owl:NamedIndividual ,
+                                                   <https://domain/SignWritingOntology/HandPart> .
+
+
+###  https://domain/SignWritingOntology/Punctuation
+<https://domain/SignWritingOntology/Punctuation> rdf:type owl:NamedIndividual ;
+                                                 <https://domain/SignWritingOntology/hasCategoryID> <https://domain/SignWritingOntology/Category7> ;
+                                                 <https://domain/SignWritingOntology/hasFswRange> "S387 - S38b"@en .
+
+
+###  https://domain/SignWritingOntology/PunctuationGroup
+<https://domain/SignWritingOntology/PunctuationGroup> rdf:type owl:NamedIndividual ;
+                                                      <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group30> .
+
+
+###  https://domain/SignWritingOntology/R_Token
+<https://domain/SignWritingOntology/R_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswStructuralMakers> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Right Lane Marker"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/RingFinger
+<https://domain/SignWritingOntology/RingFinger> rdf:type owl:NamedIndividual ;
+                                                <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group7> .
+
+
+###  https://domain/SignWritingOntology/Side
+<https://domain/SignWritingOntology/Side> rdf:type owl:NamedIndividual ,
+                                                   <https://domain/SignWritingOntology/HandPart> .
+
+
+###  https://domain/SignWritingOntology/SignWritingGlyph
+<https://domain/SignWritingOntology/SignWritingGlyph> rdf:type owl:NamedIndividual ;
+                                                      <https://domain/SignWritingOntology/hasFswRange> "S100 - S38b" .
+
+
+###  https://domain/SignWritingOntology/StraightDiagonalPlane
+<https://domain/SignWritingOntology/StraightDiagonalPlane> rdf:type owl:NamedIndividual ;
+                                                           <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group14> .
+
+
+###  https://domain/SignWritingOntology/StraightFloorPlane
+<https://domain/SignWritingOntology/StraightFloorPlane> rdf:type owl:NamedIndividual ;
+                                                        <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group15> .
+
+
+###  https://domain/SignWritingOntology/StraightWallPlane
+<https://domain/SignWritingOntology/StraightWallPlane> rdf:type owl:NamedIndividual ;
+                                                       <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group13> .
+
+
+###  https://domain/SignWritingOntology/Thumb
+<https://domain/SignWritingOntology/Thumb> rdf:type owl:NamedIndividual ;
+                                           <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group10> .
+
+
+###  https://domain/SignWritingOntology/Timing
+<https://domain/SignWritingOntology/Timing> rdf:type owl:NamedIndividual ;
+                                            <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group21> .
+
+
+###  https://domain/SignWritingOntology/TongueChinNeck
+<https://domain/SignWritingOntology/TongueChinNeck> rdf:type owl:NamedIndividual ;
+                                                    <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group26> .
+
+
+###  https://domain/SignWritingOntology/TopView
+<https://domain/SignWritingOntology/TopView> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/ViewPoint> .
+
+
+###  https://domain/SignWritingOntology/Trunk
+<https://domain/SignWritingOntology/Trunk> rdf:type owl:NamedIndividual ;
+                                           <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group27> ;
+                                           <https://domain/SignWritingOntology/hasFswRange> "S36d - S375" .
+
+
+###  https://domain/SignWritingOntology/WallPlane
+<https://domain/SignWritingOntology/WallPlane> rdf:type owl:NamedIndividual ,
+                                                        <https://domain/SignWritingOntology/Plane> .
+
+
+###  https://domain/SignWritingOntology/Writing
+<https://domain/SignWritingOntology/Writing> rdf:type owl:NamedIndividual ;
+                                             <https://domain/SignWritingOntology/hasFswRange> "S100 - S37e" .
+
+
+###  https://domain/SignWritingOntology/X
+<https://domain/SignWritingOntology/X> rdf:type owl:NamedIndividual ,
+                                                <https://domain/SignWritingOntology/RotationAxis> .
+
+
+###  https://domain/SignWritingOntology/Y
+<https://domain/SignWritingOntology/Y> rdf:type owl:NamedIndividual ,
+                                                <https://domain/SignWritingOntology/RotationAxis> .
+
+
+###  https://domain/SignWritingOntology/Z
+<https://domain/SignWritingOntology/Z> rdf:type owl:NamedIndividual ,
+                                                <https://domain/SignWritingOntology/RotationAxis> .
+
+
+###  https://domain/SignWritingOntology/i_Token
+<https://domain/SignWritingOntology/i_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswModifierIndexes> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Fill Modifiers"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/n_Token
+<https://domain/SignWritingOntology/n_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswNumber> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Number from 250 to 749"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/o_Token
+<https://domain/SignWritingOntology/o_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswModifierIndexes> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Rotation Modifiers"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/prova
+<https://domain/SignWritingOntology/prova> rdf:type owl:NamedIndividual ,
+                                                    <https://domain/SignWritingOntology/CanonicalDescription> .
+
+
+###  https://domain/SignWritingOntology/s_Token
+<https://domain/SignWritingOntology/s_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswBaseSymbolRanges> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Detailed Location BaseSymbols"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/w_Token
+<https://domain/SignWritingOntology/w_Token> rdf:type owl:NamedIndividual ,
+                                                      <https://domain/SignWritingOntology/FswBaseSymbolRanges> ;
+                                             <https://domain/SignWritingOntology/hasDescription> "Writing BaseSymbols"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/Index&MiddleFingers
+<https://domain/SignWritingOntology/Index&MiddleFingers> rdf:type owl:NamedIndividual ;
+                                                         <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group2> .
+
+
+###  https://domain/SignWritingOntology/Index&Thumb
+<https://domain/SignWritingOntology/Index&Thumb> rdf:type owl:NamedIndividual ;
+                                                 <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group9> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://domain/SignWritingOntology/Body> rdfs:comment "Glifi che indicano parti del corpo."@it ,
+                                                       "Glyphs indicating body parts."@en .
+
+
+<https://domain/SignWritingOntology/DetailedLocation> rdfs:comment "Detailed location symbols can only be used in the temporal prefix."@en .
+
+
+<https://domain/SignWritingOntology/DynamicsAndTiming> rdfs:comment "Dynamic symbols are used to give the \"feeling\" or \"tempo\" to movement."@en .
+
+
+<https://domain/SignWritingOntology/Limbs> rdfs:comment "Symbols for limbs and fingers."@en .
+
+
+<https://domain/SignWritingOntology/Movement> rdfs:comment "Contact symbols, small finger movements, straight arrows, curved arrows and circles."@en .
+
+
+<https://domain/SignWritingOntology/Punctuation> rdfs:comment "Punctuation is represented by a single symbol and separates a series of signs into structured sentences."@en .
+
+
+<https://domain/SignWritingOntology/SignWritingGlyph> rdfs:comment """Minimum part that makes up the sign in SignWriting. A symbol or glyph represents phonemic information and is full of featural information to better understand the phonemes of the symbols. The symbols are arranged in 2 dimensions to create the sign images. The symbols are organized with a 16-bit coded character set and a layered hierarchy.
+
+."""@en ,
+                                                                   "Parte minima che compone il segno in SignWriting."@it .
+
+
+<https://domain/SignWritingOntology/Trunk> rdfs:comment "Symbols for torso movement, shoulders, and hips."@en .
+
+
+<https://domain/SignWritingOntology/Writing> rdfs:comment "Symbols that can be used in the spatial signbox or the temporal prefix."@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
