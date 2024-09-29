@@ -1,29 +1,40 @@
+@prefix sw: <https://domain/SignWritingOntology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sw: <https://domain/SignWritingOntology#> .
 @base <http://www.w3.org/2002/07/owl#> .
 
-[ rdf:type owl:Ontology
+[ rdf:type owl:Ontology ;
+   <http://purl.org/dc/elements/1.1/creator> "Luana Bulla" ;
+   <http://purl.org/dc/elements/1.1/description> "L'ontologia del SignWriting descritta nel file segue i principi standard dell'OWL (Web Ontology Language) per rappresentare in modo ordinato e strutturato gli elementi della scrittura dei segni, facilitando così la formalizzazione delle Lingue dei Segni."@it ,
+                                                 "The SignWriting ontology described in the file follows the standard principles of OWL (Web Ontology Language) to represent in an orderly and structured way the elements of sign writing, thus facilitating the formalization of Sign Languages."@en ;
+   <http://purl.org/dc/elements/1.1/title> "SignWritingOntology" ;
+   rdfs:label "SignWritingOntology"
  ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty ;
+                                              rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty ;
+                                        rdfs:subPropertyOf rdfs:comment .
+
 
 #################################################################
 #    Object Properties
 #################################################################
-
-###  https://domain/SignWritingOntology/PositionAxisX
-<https://domain/SignWritingOntology/PositionAxisX> rdf:type owl:ObjectProperty ;
-                                                   owl:inverseOf <https://domain/SignWritingOntology/isPositionAxisXOf> ;
-                                                   rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
-
-
-###  https://domain/SignWritingOntology/PositionAxisY
-<https://domain/SignWritingOntology/PositionAxisY> rdf:type owl:ObjectProperty ;
-                                                   owl:inverseOf <https://domain/SignWritingOntology/isPositionAxisYOf> ;
-                                                   rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
-
 
 ###  https://domain/SignWritingOntology/hasCanonicalDescription
 <https://domain/SignWritingOntology/hasCanonicalDescription> rdf:type owl:ObjectProperty ;
@@ -57,6 +68,11 @@
                                                 rdfs:range <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> .
 
 
+###  https://domain/SignWritingOntology/hasFormalSignWritingGlyph
+<https://domain/SignWritingOntology/hasFormalSignWritingGlyph> rdf:type owl:ObjectProperty ;
+                                                               rdfs:comment "Lega il segno a tutte le sue componenenti in Fsw (glifi)" .
+
+
 ###  https://domain/SignWritingOntology/hasFswBoundingBox
 <https://domain/SignWritingOntology/hasFswBoundingBox> rdf:type owl:ObjectProperty ;
                                                        owl:inverseOf <https://domain/SignWritingOntology/isFswBoundingBoxOf> ;
@@ -74,6 +90,20 @@
                                                              <https://domain/SignWritingOntology/HeadAndFace> ,
                                                              <https://domain/SignWritingOntology/Movement> ;
                                                  rdfs:range <https://domain/SignWritingOntology/FormalSignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasFswOrientation
+<https://domain/SignWritingOntology/hasFswOrientation> rdf:type owl:ObjectProperty ;
+                                                       owl:inverseOf <https://domain/SignWritingOntology/isFswOrientationOf> ;
+                                                       rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingGlyph> ;
+                                                       rdfs:range <https://domain/SignWritingOntology/FswOrientation> .
+
+
+###  https://domain/SignWritingOntology/hasFswRotation
+<https://domain/SignWritingOntology/hasFswRotation> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <https://domain/SignWritingOntology/isFswRotationOf> ;
+                                                    rdfs:domain <https://domain/SignWritingOntology/FormalSignWritingGlyph> ;
+                                                    rdfs:range <https://domain/SignWritingOntology/FswRotation> .
 
 
 ###  https://domain/SignWritingOntology/hasGroup
@@ -110,6 +140,12 @@
 <https://domain/SignWritingOntology/hasHandPart> rdf:type owl:ObjectProperty ;
                                                  owl:inverseOf <https://domain/SignWritingOntology/isHandPartOf> ;
                                                  rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/hasOrientation
+<https://domain/SignWritingOntology/hasOrientation> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://domain/SignWritingOntology/SignWritingGlyph> ;
+                                                    rdfs:range <https://domain/SignWritingOntology/SignWritingOrientation> .
 
 
 ###  https://domain/SignWritingOntology/hasPlane
@@ -179,8 +215,12 @@
 <https://domain/SignWritingOntology/isFswGlyphOf> rdf:type owl:ObjectProperty .
 
 
-###  https://domain/SignWritingOntology/isGlyphNumberOf
-<https://domain/SignWritingOntology/isGlyphNumberOf> rdf:type owl:ObjectProperty .
+###  https://domain/SignWritingOntology/isFswOrientationOf
+<https://domain/SignWritingOntology/isFswOrientationOf> rdf:type owl:ObjectProperty .
+
+
+###  https://domain/SignWritingOntology/isFswRotationOf
+<https://domain/SignWritingOntology/isFswRotationOf> rdf:type owl:ObjectProperty .
 
 
 ###  https://domain/SignWritingOntology/isGroupIDOf
@@ -193,14 +233,6 @@
 
 ###  https://domain/SignWritingOntology/isPlaneOf
 <https://domain/SignWritingOntology/isPlaneOf> rdf:type owl:ObjectProperty .
-
-
-###  https://domain/SignWritingOntology/isPositionAxisXOf
-<https://domain/SignWritingOntology/isPositionAxisXOf> rdf:type owl:ObjectProperty .
-
-
-###  https://domain/SignWritingOntology/isPositionAxisYOf
-<https://domain/SignWritingOntology/isPositionAxisYOf> rdf:type owl:ObjectProperty .
 
 
 ###  https://domain/SignWritingOntology/isRotationAngleOf
@@ -227,14 +259,6 @@
 <https://domain/SignWritingOntology/isViewPointOf> rdf:type owl:ObjectProperty .
 
 
-###  https://domain/SignWritingOntology/orientation
-<https://domain/SignWritingOntology/orientation> rdf:type owl:ObjectProperty .
-
-
-###  https://domain/SignWritingOntology/rotation
-<https://domain/SignWritingOntology/rotation> rdf:type owl:ObjectProperty .
-
-
 #################################################################
 #    Data properties
 #################################################################
@@ -245,12 +269,16 @@ rdf:label rdf:type owl:DatatypeProperty .
 
 ###  https://domain/SignWritingOntology/PositionAxisX
 <https://domain/SignWritingOntology/PositionAxisX> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:range xsd:integer .
+                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:comment "Tutte le coordinate (asse x) associate ai singoli glifi per quel segno" .
 
 
 ###  https://domain/SignWritingOntology/PositionAxisY
 <https://domain/SignWritingOntology/PositionAxisY> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:range xsd:integer .
+                                                   rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:comment "Tutte le coordinate (asse y) associate ai singoli glifi per quel segno" .
 
 
 ###  https://domain/SignWritingOntology/hasDescription
@@ -271,7 +299,6 @@ rdf:label rdf:type owl:DatatypeProperty .
 
 ###  https://domain/SignWritingOntology/hasGlyphNumber
 <https://domain/SignWritingOntology/hasGlyphNumber> rdf:type owl:DatatypeProperty ;
-                                                    rdfs:domain <https://domain/SignWritingOntology/SignWritingSign> ;
                                                     rdfs:range xsd:integer .
 
 
@@ -412,9 +439,9 @@ rdf:label rdf:type owl:DatatypeProperty .
                                                         rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
 
 
-###  https://domain/SignWritingOntology/CurvesWallPLane
-<https://domain/SignWritingOntology/CurvesWallPLane> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
+###  https://domain/SignWritingOntology/CurvesParallelWallPLane
+<https://domain/SignWritingOntology/CurvesParallelWallPLane> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://domain/SignWritingOntology/Dynamic> .
 
 
 ###  https://domain/SignWritingOntology/DetailedLocation
@@ -525,6 +552,18 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
                                                rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingToken> .
 
 
+###  https://domain/SignWritingOntology/FswOrientation
+<https://domain/SignWritingOntology/FswOrientation> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingOrientation> ;
+                                                    rdfs:comment "Codifica dell'orientamento nel formal sign writing [00-50]" .
+
+
+###  https://domain/SignWritingOntology/FswRotation
+<https://domain/SignWritingOntology/FswRotation> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingRotation> ;
+                                                 rdfs:comment "Rotazione del glifo in Formal Sign Writing [00-0f]" .
+
+
 ###  https://domain/SignWritingOntology/FswStructuralMakers
 <https://domain/SignWritingOntology/FswStructuralMakers> rdf:type owl:Class ;
                                                          rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingToken> .
@@ -534,11 +573,11 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
 <https://domain/SignWritingOntology/Hand> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://domain/SignWritingOntology/Writing> ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <https://domain/SignWritingOntology/orientation> ;
+                                                            owl:onProperty <https://domain/SignWritingOntology/hasOrientation> ;
                                                             owl:someValuesFrom <https://domain/SignWritingOntology/SignWritingOrientation>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <https://domain/SignWritingOntology/rotation> ;
+                                                            owl:onProperty <https://domain/SignWritingOntology/hasRotationAngle> ;
                                                             owl:someValuesFrom <https://domain/SignWritingOntology/SignWritingRotation>
                                                           ] .
 
@@ -616,6 +655,26 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
 ###  https://domain/SignWritingOntology/RotationAxis
 <https://domain/SignWritingOntology/RotationAxis> rdf:type owl:Class ;
                                                   rdfs:subClassOf <https://domain/SignWritingOntology/SignWritingRotation> .
+
+
+###  https://domain/SignWritingOntology/S1ce
+<https://domain/SignWritingOntology/S1ce> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/S251
+<https://domain/SignWritingOntology/S251> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/S2f8
+<https://domain/SignWritingOntology/S2f8> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingGlyph> .
+
+
+###  https://domain/SignWritingOntology/S2fb
+<https://domain/SignWritingOntology/S2fb> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://domain/SignWritingOntology/FormalSignWritingGlyph> .
 
 
 ###  https://domain/SignWritingOntology/SignWritingCategory
@@ -741,6 +800,11 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
 <https://domain/SignWritingOntology/A_Token> rdf:type owl:NamedIndividual ,
                                                       <https://domain/SignWritingOntology/FswStructuralMakers> ;
                                              <https://domain/SignWritingOntology/hasDescription> "Sequence Marker"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/Angle_00
+<https://domain/SignWritingOntology/Angle_00> rdf:type owl:NamedIndividual ,
+                                                       <https://domain/SignWritingOntology/RotationAngle> .
 
 
 ###  https://domain/SignWritingOntology/B_Token
@@ -1070,6 +1134,16 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
                                            <https://domain/SignWritingOntology/hasFswRange> "S376 - S37e" .
 
 
+###  https://domain/SignWritingOntology/M528x544S1ce10506x457S1ce18473x457S25124491x492S2f804481x533S2fc04493x526
+<https://domain/SignWritingOntology/M528x544S1ce10506x457S1ce18473x457S25124491x492S2f804481x533S2fc04493x526> rdf:type owl:NamedIndividual ,
+                                                                                                                        <http://www.co-ode.org/ontologies/ont.owl#FormalSignWritingSign> ;
+                                                                                                               <https://domain/SignWritingOntology/hasFormalSignWritingGlyph> <https://domain/SignWritingOntology/S1ce10> ,
+                                                                                                                                                                              <https://domain/SignWritingOntology/S1ce18> ,
+                                                                                                                                                                              <https://domain/SignWritingOntology/S25124> ,
+                                                                                                                                                                              <https://domain/SignWritingOntology/S2f804> ,
+                                                                                                                                                                              <https://domain/SignWritingOntology/S2fb04> .
+
+
 ###  https://domain/SignWritingOntology/M_Token
 <https://domain/SignWritingOntology/M_Token> rdf:type owl:NamedIndividual ,
                                                       <https://domain/SignWritingOntology/FswStructuralMakers> ;
@@ -1079,6 +1153,13 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
 ###  https://domain/SignWritingOntology/MiddleFinger
 <https://domain/SignWritingOntology/MiddleFinger> rdf:type owl:NamedIndividual ;
                                                   <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group8> .
+
+
+###  https://domain/SignWritingOntology/MiddleRingBabyOnCircle
+<https://domain/SignWritingOntology/MiddleRingBabyOnCircle> rdf:type owl:NamedIndividual ,
+                                                                     <https://domain/SignWritingOntology/Index&Thumb> ;
+                                                            <https://domain/SignWritingOntology/hasFswGlyph> <https://domain/SignWritingOntology/S1ce10> ,
+                                                                                                             <https://domain/SignWritingOntology/S1ce18> .
 
 
 ###  https://domain/SignWritingOntology/MouthLips
@@ -1125,6 +1206,45 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
                                                 <https://domain/SignWritingOntology/hasGroupID> <https://domain/SignWritingOntology/Group7> .
 
 
+###  https://domain/SignWritingOntology/S1ce10
+<https://domain/SignWritingOntology/S1ce10> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/S1ce> ;
+                                            <https://domain/SignWritingOntology/hasFswOrientation> <https://domain/SignWritingOntology/orientation_10> ;
+                                            <https://domain/SignWritingOntology/hasFswRotation> <https://domain/SignWritingOntology/rotation_00> ;
+                                            <https://domain/SignWritingOntology/hasSymbolKey> "S1ce10" .
+
+
+###  https://domain/SignWritingOntology/S1ce18
+<https://domain/SignWritingOntology/S1ce18> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/S1ce> ;
+                                            <https://domain/SignWritingOntology/hasFswOrientation> <https://domain/SignWritingOntology/orientation_10> ;
+                                            <https://domain/SignWritingOntology/hasFswRotation> <https://domain/SignWritingOntology/rotation_08> ;
+                                            <https://domain/SignWritingOntology/hasSymbolKey> "S1ce18" .
+
+
+###  https://domain/SignWritingOntology/S25124
+<https://domain/SignWritingOntology/S25124> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/S251> ;
+                                            <https://domain/SignWritingOntology/hasFswOrientation> <https://domain/SignWritingOntology/orientation_20> ;
+                                            <https://domain/SignWritingOntology/hasFswRotation> <https://domain/SignWritingOntology/rotation_04> ;
+                                            <https://domain/SignWritingOntology/hasSymbolKey> "S25124" .
+
+
+###  https://domain/SignWritingOntology/S2f804
+<https://domain/SignWritingOntology/S2f804> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/S2f8> ;
+                                            <https://domain/SignWritingOntology/hasFswOrientation> <https://domain/SignWritingOntology/orientation_10> ;
+                                            <https://domain/SignWritingOntology/hasFswRotation> <https://domain/SignWritingOntology/rotation_04> ;
+                                            <https://domain/SignWritingOntology/hasSymbolKey> "S2f804" .
+
+
+###  https://domain/SignWritingOntology/S2fb04
+<https://domain/SignWritingOntology/S2fb04> rdf:type owl:NamedIndividual ,
+                                                     <https://domain/SignWritingOntology/S2fb> ;
+                                            <https://domain/SignWritingOntology/hasFswOrientation> <https://domain/SignWritingOntology/orientation_00> ;
+                                            <https://domain/SignWritingOntology/hasFswRotation> <https://domain/SignWritingOntology/rotation_04> .
+
+
 ###  https://domain/SignWritingOntology/Side
 <https://domain/SignWritingOntology/Side> rdf:type owl:NamedIndividual ,
                                                    <https://domain/SignWritingOntology/HandPart> .
@@ -1133,6 +1253,34 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
 ###  https://domain/SignWritingOntology/SignWritingGlyph
 <https://domain/SignWritingOntology/SignWritingGlyph> rdf:type owl:NamedIndividual ;
                                                       <https://domain/SignWritingOntology/hasFswRange> "S100 - S38b" .
+
+
+###  https://domain/SignWritingOntology/Simultaneous
+<https://domain/SignWritingOntology/Simultaneous> rdf:type owl:NamedIndividual ,
+                                                           <https://domain/SignWritingOntology/CurvesParallelWallPLane> ;
+                                                  <https://domain/SignWritingOntology/hasFswGlyph> <https://domain/SignWritingOntology/S2fb04> ;
+                                                  <https://domain/SignWritingOntology/hasSignWritingGlyph> <https://domain/SignWritingOntology/Simultaneous> ,
+                                                                                                           <https://domain/SignWritingOntology/Slow> .
+
+
+###  https://domain/SignWritingOntology/Slow
+<https://domain/SignWritingOntology/Slow> rdf:type owl:NamedIndividual ,
+                                                   <https://domain/SignWritingOntology/CurvesParallelWallPLane> ;
+                                          <https://domain/SignWritingOntology/hasFswGlyph> <https://domain/SignWritingOntology/S2f804> .
+
+
+###  https://domain/SignWritingOntology/Snow1
+<https://domain/SignWritingOntology/Snow1> rdf:type owl:NamedIndividual ,
+                                                    <https://domain/SignWritingOntology/SignWritingSign> ;
+                                           <https://domain/SignWritingOntology/hasCanonicalDescription> <https://domain/SignWritingOntology/oggetti-piccoli-rotondi-cadono-leggermente> ;
+                                           <https://domain/SignWritingOntology/hasFSWSign> <https://domain/SignWritingOntology/M528x544S1ce10506x457S1ce18473x457S25124491x492S2f804481x533S2fc04493x526> ;
+                                           <https://domain/SignWritingOntology/hasSignWritingGlyph> <https://domain/SignWritingOntology/MiddleRingBabyOnCircle> ,
+                                                                                                    <https://domain/SignWritingOntology/Simultaneous> ,
+                                                                                                    <https://domain/SignWritingOntology/Slow> ,
+                                                                                                    <https://domain/SignWritingOntology/TravelShaking-WallPlane> ;
+                                           <https://domain/SignWritingOntology/hasSynset> <https://domain/SignWritingOntology/snow.v.01> ;
+                                           rdf:label "Snow" ;
+                                           <https://domain/SignWritingOntology/hasGlyphNumber> 5 .
 
 
 ###  https://domain/SignWritingOntology/StraightDiagonalPlane
@@ -1168,6 +1316,12 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
 ###  https://domain/SignWritingOntology/TopView
 <https://domain/SignWritingOntology/TopView> rdf:type owl:NamedIndividual ,
                                                       <https://domain/SignWritingOntology/ViewPoint> .
+
+
+###  https://domain/SignWritingOntology/TravelShaking-WallPlane
+<https://domain/SignWritingOntology/TravelShaking-WallPlane> rdf:type owl:NamedIndividual ,
+                                                                      <https://domain/SignWritingOntology/Timing> ;
+                                                             <https://domain/SignWritingOntology/hasFswGlyph> <https://domain/SignWritingOntology/S25124> .
 
 
 ###  https://domain/SignWritingOntology/Trunk
@@ -1219,15 +1373,127 @@ S[123][0-9a-f]{2}[0-5][0-9a-f] >> Symbol key definition"""@en .
                                              <https://domain/SignWritingOntology/hasDescription> "Rotation Modifiers"^^rdfs:Literal .
 
 
-###  https://domain/SignWritingOntology/prova
-<https://domain/SignWritingOntology/prova> rdf:type owl:NamedIndividual ,
-                                                    <https://domain/SignWritingOntology/CanonicalDescription> .
+###  https://domain/SignWritingOntology/oggetti-piccoli-rotondi-cadono-leggermente
+<https://domain/SignWritingOntology/oggetti-piccoli-rotondi-cadono-leggermente> rdf:type owl:NamedIndividual ,
+                                                                                         <https://domain/SignWritingOntology/CanonicalDescription> .
+
+
+###  https://domain/SignWritingOntology/orientation_00
+<https://domain/SignWritingOntology/orientation_00> rdf:type owl:NamedIndividual ,
+                                                             <https://domain/SignWritingOntology/FswOrientation> ;
+                                                    <https://domain/SignWritingOntology/hasSymbolKey> "S2fb04" .
+
+
+###  https://domain/SignWritingOntology/orientation_10
+<https://domain/SignWritingOntology/orientation_10> rdf:type owl:NamedIndividual ,
+                                                             <https://domain/SignWritingOntology/FswOrientation> .
+
+
+###  https://domain/SignWritingOntology/orientation_20
+<https://domain/SignWritingOntology/orientation_20> rdf:type owl:NamedIndividual ,
+                                                             <https://domain/SignWritingOntology/FswOrientation> .
+
+
+###  https://domain/SignWritingOntology/orientation_30
+<https://domain/SignWritingOntology/orientation_30> rdf:type owl:NamedIndividual ,
+                                                             <https://domain/SignWritingOntology/FswOrientation> .
+
+
+###  https://domain/SignWritingOntology/orientation_40
+<https://domain/SignWritingOntology/orientation_40> rdf:type owl:NamedIndividual ,
+                                                             <https://domain/SignWritingOntology/FswOrientation> .
+
+
+###  https://domain/SignWritingOntology/orientation_50
+<https://domain/SignWritingOntology/orientation_50> rdf:type owl:NamedIndividual ,
+                                                             <https://domain/SignWritingOntology/FswOrientation> .
+
+
+###  https://domain/SignWritingOntology/rotation_00
+<https://domain/SignWritingOntology/rotation_00> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_01
+<https://domain/SignWritingOntology/rotation_01> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_02
+<https://domain/SignWritingOntology/rotation_02> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_03
+<https://domain/SignWritingOntology/rotation_03> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_04
+<https://domain/SignWritingOntology/rotation_04> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_05
+<https://domain/SignWritingOntology/rotation_05> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_06
+<https://domain/SignWritingOntology/rotation_06> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_07
+<https://domain/SignWritingOntology/rotation_07> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_08
+<https://domain/SignWritingOntology/rotation_08> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_09
+<https://domain/SignWritingOntology/rotation_09> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_0a
+<https://domain/SignWritingOntology/rotation_0a> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_0b
+<https://domain/SignWritingOntology/rotation_0b> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_0c
+<https://domain/SignWritingOntology/rotation_0c> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_0e
+<https://domain/SignWritingOntology/rotation_0e> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
+
+
+###  https://domain/SignWritingOntology/rotation_0f
+<https://domain/SignWritingOntology/rotation_0f> rdf:type owl:NamedIndividual ,
+                                                          <https://domain/SignWritingOntology/FswRotation> .
 
 
 ###  https://domain/SignWritingOntology/s_Token
 <https://domain/SignWritingOntology/s_Token> rdf:type owl:NamedIndividual ,
                                                       <https://domain/SignWritingOntology/FswBaseSymbolRanges> ;
                                              <https://domain/SignWritingOntology/hasDescription> "Detailed Location BaseSymbols"^^rdfs:Literal .
+
+
+###  https://domain/SignWritingOntology/snow.v.01
+<https://domain/SignWritingOntology/snow.v.01> rdf:type owl:NamedIndividual ,
+                                                        <http://wordnet-rdf.princeton.edu/ontology#Synset> ;
+                                               rdf:label "fall as snow" .
 
 
 ###  https://domain/SignWritingOntology/w_Token
